@@ -3,8 +3,7 @@ Code for brain age prediction from EEG in challenge https://codalab.lisn.upsacla
 
 Folder directory
 
--dataset  (training and testing files in .scp format)
-
+-dataset  (training and testing files in .scp format) \n
   -fold1
     train.scp  (1000 subjects in training dataset, with original float ages as labels)
     train_class.scp  (1000 subjects in training dataset, with int ages as labels by rounding float brain ages)

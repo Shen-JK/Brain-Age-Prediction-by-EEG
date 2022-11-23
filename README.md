@@ -24,3 +24,17 @@ dataset
 └───train_class.scp  (1200 subjects in training dataset)
 └───train_subjects.csv  (brain ages  of 1200 subjects in training dataset)
 ```
+
+- log_for_test
+- log
+- test_final
+- test_final_results
+- training
+- load_data.py
+- model_use.py
+- run_train_MIT.sh
+- train_MIT.py
+
+
+
+

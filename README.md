@@ -35,6 +35,10 @@ dataset
 - run_train_MIT.sh 
 - train_MIT.py  (training code)
 
+## Main idea
 
+## Procedures to reproduce training and testing
+
+## Procedures to reproduce testing only  by using trained models
 
 

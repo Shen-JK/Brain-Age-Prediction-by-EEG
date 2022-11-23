@@ -25,15 +25,15 @@ dataset
 └───train_subjects.csv  (brain ages  of 1200 subjects in training dataset)
 ```
 
-- log_for_test
-- log
-- test_final
-- test_final_results
-- training
-- load_data.py
-- model_use.py
-- run_train_MIT.sh
-- train_MIT.py
+- log_for_test  (For reproducing the test results only, ensemble these trained models' results)
+- log  (For reproducing the training process, this folder is used to save the checkpoints)
+- test_final  (The unzip .fif files in final test phase)
+- test_final_results (To get the ensembled results)
+- training  (The unzip .fif files in training dataset)
+- load_data.py  (dataloader code)
+- model_use.py  (network code)
+- run_train_MIT.sh 
+- train_MIT.py  (training code)
 
 
 

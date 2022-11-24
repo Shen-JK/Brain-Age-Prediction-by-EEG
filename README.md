@@ -70,6 +70,28 @@ training
 
 We change this regression problem to classification problem. The brain ages in training set are ranging from 4 to 24. The float ages are rounded so this question becomes to classify 21 classes. To overcome overfitting, an offset of 1,0,-1 is added to ages in training stage. The max two probabilities are averaged to get the prediction results in test stage. The 1200 subjects in training set are divided into six parts and the models are ensembled. As fold4 and fold5 show no performance improvement on development phase, the models of the other four folds are ensembled to get final results.
 
+run_train_MIT.sh shows some hyper-parameters in training stage.
+
+train_MIT.py shows the training (function train_spec), testing (function valid_class or test_class), and final test (function final_test_class) code.
+
+load_data.py shows labels, offsets and feature extraction. The melspectrograms of EC and EO of each subjects are extracted.
+
+model_use.py shows the network structure. The features are input into the network as follows
+```
+       melspec of EC           melspec of EO
+         1*153*128               1*75*128
+         ____|____              ____|____
+        |         |            |         |
+      1*153*64  1*153*64    1*75*64   1*75*64
+        |         |            |         |
+    branch 1a  branch 1b   branch 2a  branch 2b
+        |_________|            |_________|
+             |______________________|
+                          |
+                       21 classes
+```
+
+
 ## Procedures to reproduce training and testing
 
 ## Procedures to reproduce testing only  by using trained models

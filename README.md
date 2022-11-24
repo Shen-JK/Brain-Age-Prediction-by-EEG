@@ -24,12 +24,43 @@ dataset
 └───train_class.scp  (1200 subjects in training dataset)
 └───train_subjects.csv  (brain ages  of 1200 subjects in training dataset)
 ```
-
 - log_for_test  (For reproducing the test results only, ensemble these trained models' results)
+```
+log_for_test
+│
+└───fold1
+│   └───model
+|         └───checkpoint20\30\36
+│   └───code
+└───fold2
+└───fold3
+└───fold6
+```
 - log  (For reproducing the training process, this folder is used to save the checkpoints)
 - test_final  (The unzip .fif files in final test phase)
+```
+test_final
+└───subj2001_EC_raw.fif
+└───subj2001_EO_raw.fif
+└───subj2002_EC_raw.fif
+└───subj2002_EO_raw.fif
+└───......
+```
 - test_final_results (To get the ensembled results)
+```
+test_final_results
+└───combine.py
+└───.csv
+```
 - training  (The unzip .fif files in training dataset)
+```
+training
+└───subj0001_EC_raw.fif
+└───subj0001_EO_raw.fif
+└───......
+└───subj1200_EC_raw.fif
+└───subj1200_EO_raw.fif
+```
 - load_data.py  (dataloader code)
 - model_use.py  (network code)
 - run_train_MIT.sh 

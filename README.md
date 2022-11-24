@@ -68,6 +68,8 @@ training
 
 ## Main idea
 
+We change this regression problem to classification problem. The brain ages in training set are ranging from 4 to 24. The float ages are rounded so this question becomes to classify 21 classes. To overcome overfitting, an offset of 1,0,-1 is added to ages in training stage. The max two probabilities are averaged to get the prediction results in test stage. The 1200 subjects in training set are divided into six parts and the models are ensembled. As fold4 and fold5 show no performance improvement on development phase, the models of the other four folds are ensembled to get final results.
+
 ## Procedures to reproduce training and testing
 
 ## Procedures to reproduce testing only  by using trained models

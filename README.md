@@ -93,34 +93,49 @@ model_use.py shows the network structure. The features are input into the networ
 ## Procedures to reproduce training and testing
 
 The model is trained on single NVIDIA Tesla P100, with torch1.7.1+cu101.
+
 First, put the 1200 EC and EO into training folder. And put the 400 EC and EO in final test into test_final folder.
 
 Then, run the following code in turn, and the models will be saved in log folder.
 
 ./run_train_MIT.sh 1 fold1
+
 ./run_train_MIT.sh 1 fold2
+
 ./run_train_MIT.sh 1 fold3
+
 ./run_train_MIT.sh 1 fold6
 
 To get the test results, run
 
 ./run_train_MIT.sh 0 fold1
+
 ./run_train_MIT.sh 0 fold2
+
 ./run_train_MIT.sh 0 fold3
+
 ./run_train_MIT.sh 0 fold6
+
 cd ./test_final_results
+
 python combine.py
 
-and the 'mysubmission_combineMITfold1236_final_re.csv' will be generated.
+and the '*mysubmission_combineMITfold1236_final_re.csv'* will be generated.
 
 ## Procedures to reproduce testing only  by using trained models
 
 If you just want to reproduce the test process, you can use our trained model in log_for_test.
 
 Change  'log_for_test' to 'log' and run
+
 ./run_train_MIT.sh 0 fold1
+
 ./run_train_MIT.sh 0 fold2
+
 ./run_train_MIT.sh 0 fold3
+
 ./run_train_MIT.sh 0 fold6
+
 cd ./test_final_results
+
 python combine.py

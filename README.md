@@ -112,9 +112,7 @@ and the '*mysubmission_combineMITfold1236_final_re.csv'* will be generated.
 
 ## Procedures to reproduce testing only  by using trained models
 
-If you just want to reproduce the test process, you can use our trained model in log_for_test. Download 
-
-Change  'log_for_test' to 'log' and run
+If you just want to reproduce the test process, you can use our trained model in log_for_test. Download the log_for_test.rar in trained_models in Releases. Unzip it and change the folder name'log_for_test' to 'log' and run
 
 ./run_train_MIT.sh 0 fold1
 

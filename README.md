@@ -24,18 +24,6 @@ dataset
 └───train_class.scp  (1200 subjects in training dataset)
 └───train_subjects.csv  (brain ages  of 1200 subjects in training dataset)
 ```
-- log_for_test  (For reproducing the test results only, ensemble these trained models' results)
-```
-log_for_test
-│
-└───fold1
-│   └───model
-|         └───checkpoint20\30\36
-│   └───code
-└───fold2
-└───fold3
-└───fold6
-```
 - log  (For reproducing the training process, this folder is used to save the checkpoints)
 - test_final  (The unzip .fif files in final test phase)
 ```
@@ -124,7 +112,7 @@ and the '*mysubmission_combineMITfold1236_final_re.csv'* will be generated.
 
 ## Procedures to reproduce testing only  by using trained models
 
-If you just want to reproduce the test process, you can use our trained model in log_for_test.
+If you just want to reproduce the test process, you can use our trained model in log_for_test. Download 
 
 Change  'log_for_test' to 'log' and run
 
